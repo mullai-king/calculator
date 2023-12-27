@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image" href="src/calculatorPNG.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="calculator-container container">
+        <h1 id="title"> Calculator</h1>
+          <input type="text" id="result" class="form-control mb-2" placeholder="0">
+          <div> 
+              <button class="btn btn-secondary" onclick="clearDisplay()" id="clear">C</button>
+              <button class="btn btn-secondary bi bi-backspace" onclick="deleteLast()"></button>
+              <button class="btn btn-secondary" onclick="appendCharacter('%')">%</button>
+              <button class="btn btn-secondary" onclick="appendCharacter ('/')">&divide</button>
+          </div>
+          <div> 
+            <button class="btn btn-light" onclick="appendCharacter('7')">7</button>
+            <button class="btn btn-light" onclick="appendCharacter('8')">8</button>
+            <button class="btn btn-light" onclick="appendCharacter ('9')">9</button>
+            <button class="btn btn-secondary" onclick="appendCharacter('*')">&#215</button>
+          </div>
+          <div> 
+            <button class="btn btn-light" onclick="appendCharacter('4')" id="4">4</button>
+            <button class="btn btn-light" onclick="appendCharacter('5')" id="5">5</button>
+            <button class="btn btn-light" onclick="appendCharacter ('6')" id="6">6</button>
+            <button class="btn btn-secondary" onclick="appendCharacter('-')" id="subtract">-</button>
+          </div>
+          <div> 
+            <button class="btn btn-light" onclick="appendCharacter('3')" id="3">3</button>
+            <button class="btn btn-light" onclick="appendCharacter('2')" id="2">2</button>
+            <button class="btn btn-light" onclick="appendCharacter ('1')" id="1">1</button>
+            <button class="btn btn-secondary" onclick="appendCharacter('+')" id="add">+</button>
+          </div>
+          <div> 
+            <button class="btn btn-light" onclick="appendCharacter('00')">00</button>
+            <button class="btn btn-light" onclick="appendCharacter('0')">0</button>
+            <button class="btn btn-light" onclick="appendCharacter ('.')">.</button>
+            <button class="btn btn-secondary" onclick="memoryClear()">MC</button>
+          </div>
+          <div> 
+            <button class="btn btn-secondary" onclick="memoryAdd()">M+</button>
+            <button class="btn btn-secondary" onclick="memoryDelete()">M-</button>
+            
+            <button class="btn btn-primary" onclick="calculation()" id="equal">=</button>
+          </div>
+          <p id="description"> Designed by Mullai</p>
+      </div>
+      <script src="script.js"></script>
+      <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
+</html>
